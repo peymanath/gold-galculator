@@ -29,18 +29,131 @@
 							<label for="weight-input" class="label">
 								<span>وزن</span>
 								<small>(گرم)</small>
+								<sup class="require">*</sup>
 							</label>
-							<input id="weight-input" type="text" class="input input-text" placeholder="وزن طلا"/>
+							<input
+								id="weight-input"
+								type="number"
+								class="input input-text"
+								placeholder="وزن طلا"
+                                value="1"
+								require />
+						</div>
+						<!-- the inputs -->
+						<div class="field">
+							<label for="gold-daily-rate-input" class="label">
+								<span>نرخ روز طلا</span>
+								<small>(تومان)</small>
+								<sup class="require">*</sup>
+							</label>
+							<input
+								id="gold-daily-rate-input"
+								type="number"
+								class="input input-text"
+								placeholder="قیمت هر گرم طلای 18 عیار"
+                                value="2178000"
+								require />
+						</div>
+						<!-- the inputs -->
+						<div class="field">
+							<label for="sales-profit-input" class="label">
+								<span>سود فروش</span>
+								<small>(درصد)</small>
+								<sup class="require">*</sup>
+							</label>
+							<input
+								id="sales-profit-input"
+								type="number"
+								class="input input-text"
+								placeholder="میزان سود فروشنده طلا را اینجا وارد نمایید."
+								require />
+						</div>
+						<!-- the inputs -->
+						<div class="field">
+							<label for="discount-input" class="label">
+								<span>تخفیف</span>
+								<small>(تومان)</small>
+							</label>
+							<input
+								id="discount-input"
+								type="number"
+								class="input input-text"
+								placeholder="میزان کل تخفیفات" />
+						</div>
+						<!-- the inputs -->
+						<div class="field">
+							<label for="tax-input" class="label">
+								<span>مالیات</span>
+								<small>(درصد)</small>
+							</label>
+							<input
+								id="tax-input"
+								type="number"
+								class="input input-text"
+								placeholder="مالیات بر ارزش افزوده" />
 						</div>
 					</div>
+
 					<div class="fields">
 						<!-- the inputs -->
 						<div class="field">
-							<label for="weight-input" class="label">
-								<span>وزن</span>
-								<small>(گرم)</small>
+							<label for="construction-wages-input" class="label">
+								<span>اجرت ساخت</span>
+								<small>(تومان)</small>
 							</label>
-							<input id="weight-input" type="text" class="input input-text" placeholder="وزن طلا"/>
+							<input
+								id="construction-wages-input"
+								type="number"
+								class="input input-text"
+								placeholder="اجرت ساخت طلا و جواهر برای هر گرم را به تومان وارد نمایید" />
+						</div>
+						<!-- the inputs -->
+						<div class="field">
+							<label for="construction-wages-percent-input" class="label">
+								<span>اجرت ساخت</span>
+								<small>(درصد)</small>
+							</label>
+							<input
+								id="construction-wages-percent-input"
+								type="number"
+								class="input input-text"
+								placeholder="اجرت ساخت درصدی را بدون درصد و فقط عددی وارد کنید" />
+						</div>
+						<!-- the inputs -->
+						<div class="field">
+							<label for="jewel-value-input" class="label">
+								<span>ارزش جواهر</span>
+								<small>(تومان)</small>
+							</label>
+							<input
+								id="jewel-value-input"
+								type="number"
+								class="input input-text"
+								placeholder="ارزش جواهرات به کار رفته در زیورآلات خود را وارد نمایید" />
+						</div>
+						<!-- the inputs -->
+						<div class="field">
+							<label for="value-stone-input" class="label">
+								<span>ارزش سنگ</span>
+								<small>(تومان)</small>
+							</label>
+							<input
+								id="value-stone-input"
+								type="number"
+								class="input input-text"
+								placeholder="ارزش کلی سنگهای قیمتی زیورآلات خود را وارد نمایید" />
+						</div>
+						<!-- the inputs -->
+						<div class="field">
+							<label for="value-other-belongings-input" class="label">
+								<span>ارزش سایر متعلقات</span>
+								<small>(تومان)</small>
+							</label>
+							<input
+								id="value-other-belongings-input"
+								type="number"
+								class="input input-text"
+								placeholder="ارزش سایر متعلقات بکار رفته در زیورآلات خود را وارد نمایید" />
 						</div>
 					</div>
 				</div>

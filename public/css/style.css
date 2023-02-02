@@ -122,6 +122,7 @@ main {
 }
 small{
     font-size: 1rem;
+    color: var(--primary);
 }
 /* ==================== sections style ==================== */
 .boxed {
@@ -150,6 +151,10 @@ small{
 
 .boxed-description .fields {
 	width: 100%;
+    display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+    gap: 10px;
 }
 /* ==================== input style ==================== */
 .field {
@@ -165,17 +170,22 @@ small{
 	padding: 0 5px;
 }
 .input {
-	padding: 2px 10px;
+	font-size: 1.2rem;
+	padding: 6px 10px;
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
 }
 .input::placeholder {
-	font-size: 1.2rem;
 	color: var(--text);
 }
-
+.input:focus::placeholder {
+	color: transparent;
+}
+.require{
+    color: red;
+}
 /* ==================== responsiv style ==================== */
-@media (min-width: 640px) {
+@media (min-width: 768px) {
 	.boxed-description .fields {
 		width: 49%;
 	}
