@@ -1,12 +1,13 @@
 /* ==================== Root Style ==================== */
 :root {
 	--primary: #00abb3;
-	--primary-t: #e1e1e1;
+	--primary-t: #fff;
 	--primary-b: #00abb3;
 	--secondary: #3c4048;
 	--text: #b2b2b2;
 	--border: #eaeaea;
 	--shadow: #d6d3d3b7;
+	--radius: 0.7rem;
 	--font-family: "Ray";
 }
 
@@ -24,8 +25,8 @@
 	box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
+html {
+	font-size: 62.5%;
 }
 
 a,
@@ -100,34 +101,36 @@ pre {
 	font-weight: normal;
 	font-style: normal;
 	font-display: fallback;
-	src: local(Ray), url(../font/Ray.woff) format("woff");
+	src: local("Ray"), url(../font/Ray.woff) format("woff");
 }
 @font-face {
 	font-family: "Ray";
 	font-weight: bold;
 	font-style: normal;
 	font-display: fallback;
-	src: local(Ray), url(../font/Ray-Bold.woff) format("woff");
+	src: local("Yekan Bakh"), url(../font/Ray-Bold.woff) format("woff");
 }
 
 * {
 	font-family: "Ray";
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 /* ==================== main style ==================== */
 main {
 	padding: 0 20px;
 }
-
+small{
+    font-size: 1rem;
+}
 /* ==================== sections style ==================== */
 .boxed {
 	width: 100%;
 	margin: 10px 0;
 	border: 1px solid var(--border);
-	border-radius: .7rem;
-    box-shadow: 0 0 20px 0 var(--shadow);
-    overflow: hidden;
+	border-radius: var(--radius);
+	box-shadow: 0 0 20px 0 var(--shadow);
+	overflow: hidden;
 }
 .boxed-title {
 	padding: 5px 10px;
@@ -136,6 +139,44 @@ main {
 	border-bottom: 1px solid var(--border);
 }
 .boxed-description {
-	padding: 5px 10px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 10px;
 	color: var(--secondary);
+}
+
+.boxed-description .fields {
+	width: 100%;
+}
+/* ==================== input style ==================== */
+.field {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.label,
+.input {
+	width: 100%;
+}
+.label {
+	padding: 0 5px;
+}
+.input {
+	padding: 2px 10px;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+}
+.input::placeholder {
+	font-size: 1.2rem;
+	color: var(--text);
+}
+
+/* ==================== responsiv style ==================== */
+@media (min-width: 640px) {
+	.boxed-description .fields {
+		width: 49%;
+	}
 }
