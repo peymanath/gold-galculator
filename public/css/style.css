@@ -1,82 +1,104 @@
-/* Root Style */
+/* ==================== Root Style ==================== */
 :root {
-	--primary: #00ABB3;
-	--secondary: #3C4048;
-	--text: #B2B2B2;
-	--border: #EAEAEA;
+	--primary: #00abb3;
+	--secondary: #3c4048;
+	--text: #b2b2b2;
+	--border: #eaeaea;
 	--font-family: "Ray";
 }
 
 /* ==================== Reset Css ==================== */
- *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-    all: unset;
-    display: revert;
+*:where(
+		:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+	) {
+	all: unset;
+	display: revert;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-a, button {
-    cursor: revert;
+a,
+button {
+	cursor: revert;
 }
 
-ol, ul, menu {
-    list-style: none;
+ol,
+ul,
+menu {
+	list-style: none;
 }
 
 img {
-    max-inline-size: 100%;
-    max-block-size: 100%;
+	max-inline-size: 100%;
+	max-block-size: 100%;
 }
 
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 
-input, textarea {
-    -webkit-user-select: auto;
+input,
+textarea {
+	-webkit-user-select: auto;
 }
 
 textarea {
-    white-space: revert;
+	white-space: revert;
 }
 
 meter {
-    -webkit-appearance: revert;
-    appearance: revert;
+	-webkit-appearance: revert;
+	appearance: revert;
 }
 
 pre {
-    all: revert;
+	all: revert;
 }
 
 ::placeholder {
-    color: unset;
+	color: unset;
 }
 
 ::marker {
-    content: initial;
+	content: initial;
 }
 
 :where([hidden]) {
-    display: none;
+	display: none;
 }
 
 :where([contenteditable]:not([contenteditable="false"])) {
-    -moz-user-modify: read-write;
-    -webkit-user-modify: read-write;
-    overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
-    -webkit-user-select: auto;
+	-moz-user-modify: read-write;
+	-webkit-user-modify: read-write;
+	overflow-wrap: break-word;
+	-webkit-line-break: after-white-space;
+	-webkit-user-select: auto;
 }
 
 :where([draggable="true"]) {
-    -webkit-user-drag: element;
+	-webkit-user-drag: element;
 }
 
 :where(dialog:modal) {
-    all: revert;
+	all: revert;
+}
+
+/* ==================== Loaded Fonts ==================== */
+@font-face {
+	font-family: "Ray";
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+	src: local(Ray), url(../font/Ray.woff) format('woff');
+}
+@font-face {
+	font-family: "Ray";
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+	src: local(Ray), url(../font/Ray-Bold.woff) format('woff');
 }
