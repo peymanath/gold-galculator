@@ -1,3 +1,5 @@
+const allInput = document.getElementsByClassName("input");
+
 const calculatePrice = () => {
 	const weightInput = document.getElementById("weight-input").value;
 	const goldDailyRateInput = document.getElementById("gold-daily-rate-input").value;
@@ -9,7 +11,7 @@ const calculatePrice = () => {
 	const jewelValueInput = document.getElementById("jewel-value-input").value;
 	const valueStoneInput = document.getElementById("value-stone-input").value;
 	const valueOtherBelongingsInput = document.getElementById("value-other-belongings-input").value;
-	const allInput = document.getElementsByClassName("input");
+
 };
 
 document.addEventListener("DOMContentLoaded", calculatePrice);

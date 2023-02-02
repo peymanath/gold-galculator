@@ -140,21 +140,27 @@ small{
 	border-bottom: 1px solid var(--border);
 }
 .boxed-description {
+	padding: 10px;
+	color: var(--secondary);
+}
+.boxed-description.box-fields {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.boxed-description .fields{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.boxed-description.box-results{
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	gap: 10px;
-	padding: 10px;
-	color: var(--secondary);
-}
-
-.boxed-description .fields {
-	width: 100%;
-    display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-    gap: 10px;
+	gap: 20px;
 }
 /* ==================== input style ==================== */
 .field {
@@ -184,9 +190,43 @@ small{
 .require{
     color: red;
 }
+/* ==================== result style ==================== */
+.results{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid var(--border);
+}
+.results-separator{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.results-separator.rs-description{
+	border-right: 4px solid var(--primary);
+}
+.results-title{
+	padding: 0 10px;
+	color: var(--primary);
+}
+.results-subtitle{
+	padding-right: 14px;
+	font-size: 1.2rem;
+	color: var(--text);
+}
+.result{	
+	margin: 0 5px;
+	padding: 4px 12px;
+	border: 2px solid var(--primary);
+	border-radius: var(--radius);
+}
 /* ==================== responsiv style ==================== */
 @media (min-width: 768px) {
 	.boxed-description .fields {
-		width: 49%;
+		width: 48%;
 	}
 }

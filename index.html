@@ -17,7 +17,7 @@
 				<!-- the title box -->
 				<div class="boxed-title">محاسبه آنلاین طلا</div>
 
-				<div class="boxed-description">
+				<div class="boxed-description box-fields">
 					<div class="fields">
 						<!-- the inputs -->
 						<div class="field">
@@ -111,8 +111,74 @@
 			<!-- Result Box  -->
 			<section class="boxed">
 				<!-- the title box -->
-				<div class="boxed-title">the Title</div>
-				<div class="boxed-description">the Dwscription</div>
+				<div class="boxed-title">قیمت محاسبه شده</div>
+				<div class="boxed-description box-results">
+                    <!-- the results -->
+					<div class="results">
+						<div class="results-separator rs-description">
+							<span class="results-title">قیمت نهایی محصول</span>
+							<span class="results-subtitle">قیمت طلا + اجرت ساخت + سود + مالیات</span>
+						</div>
+						<div class="results-separator">
+							<span class="result">
+                                <span id="rpSales">0</span>
+                                <small>تومان</small>
+                            </span>
+						</div>
+					</div>
+                    <!-- the results -->
+					<div class="results">
+						<div class="results-separator rs-description">
+							<span class="results-title">قیمت طلای محصول</span>
+							<span class="results-subtitle">وزن ✕ نرخ روز طلا</span>
+						</div>
+						<div class="results-separator">
+							<span class="result">
+                                <span id="rpGold">0</span>
+                                <small>تومان</small>
+                            </span>
+						</div>
+					</div>
+                    <!-- the results -->
+					<div class="results">
+						<div class="results-separator rs-description">
+							<span class="results-title">اجرت ساخت</span>
+							<span class="results-subtitle">(قیمت طلا ✕ ۱۸ %) + ۰ تومان</span>
+						</div>
+						<div class="results-separator">
+							<span class="result">
+                                <span id="rpGrant">0</span>
+                                <small>تومان</small>
+                            </span>
+						</div>
+					</div>
+                    <!-- the results -->
+					<div class="results">
+						<div class="results-separator rs-description">
+							<span class="results-title">سود فروش طلا</span>
+							<span class="results-subtitle">(قیمت طلا + اجرت ساخت) ✕ ۶ %</span>
+						</div>
+						<div class="results-separator">
+							<span class="result">
+                                <span id="rpBenefit">0</span>
+                                <small>تومان</small>
+                            </span>
+						</div>
+					</div>
+                    <!-- the results -->
+					<div class="results">
+						<div class="results-separator rs-description">
+							<span class="results-title">مالیات</span>
+							<span class="results-subtitle">(سود فروش طلا + اجرت ساخت) ✕ ۹ %</span>
+						</div>
+						<div class="results-separator">
+							<span class="result">
+                                <span id="rpTax">0</span>
+                                <small>تومان</small>
+                            </span>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 
