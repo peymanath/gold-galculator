@@ -1,9 +1,12 @@
 /* ==================== Root Style ==================== */
 :root {
 	--primary: #00abb3;
+	--primary-t: #e1e1e1;
+	--primary-b: #00abb3;
 	--secondary: #3c4048;
 	--text: #b2b2b2;
 	--border: #eaeaea;
+	--shadow: #d6d3d3b7;
 	--font-family: "Ray";
 }
 
@@ -19,6 +22,10 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
 }
 
 a,
@@ -90,15 +97,45 @@ pre {
 /* ==================== Loaded Fonts ==================== */
 @font-face {
 	font-family: "Ray";
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-	src: local(Ray), url(../font/Ray.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+	src: local(Ray), url(../font/Ray.woff) format("woff");
 }
 @font-face {
 	font-family: "Ray";
-    font-weight: bold;
-    font-style: normal;
-    font-display: fallback;
-	src: local(Ray), url(../font/Ray-Bold.woff) format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: fallback;
+	src: local(Ray), url(../font/Ray-Bold.woff) format("woff");
+}
+
+* {
+	font-family: "Ray";
+    font-size: 1.5rem;
+}
+
+/* ==================== main style ==================== */
+main {
+	padding: 0 20px;
+}
+
+/* ==================== sections style ==================== */
+.boxed {
+	width: 100%;
+	margin: 10px 0;
+	border: 1px solid var(--border);
+	border-radius: .7rem;
+    box-shadow: 0 0 20px 0 var(--shadow);
+    overflow: hidden;
+}
+.boxed-title {
+	padding: 5px 10px;
+	background-color: var(--primary);
+	color: var(--primary-t);
+	border-bottom: 1px solid var(--border);
+}
+.boxed-description {
+	padding: 5px 10px;
+	color: var(--secondary);
 }
