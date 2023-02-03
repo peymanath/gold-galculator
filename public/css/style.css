@@ -157,7 +157,8 @@ main {
 	flex-wrap: wrap;
 	gap: 10px;
 }
-.boxed-description.box-results {
+.boxed-description.box-results,
+.boxed-description.box-news {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -177,7 +178,7 @@ main {
 .label {
 	padding: 0 5px;
 }
-.field-title{
+.field-title {
 	color: var(--secondary);
 	font-size: 1.4rem;
 }
@@ -207,21 +208,26 @@ main {
 	padding-bottom: 5px;
 	border-bottom: 1px solid var(--border);
 }
+.results:last-child {
+	border-bottom: none;
+}
 .results-separator {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 }
 .results-separator.rs-description {
-	border-right: 4px solid var(--primary);
+	border-right: 3px solid var(--primary);
 }
-.results-title {
+.results-title,
+.news-title {
 	padding: 0 10px;
 	color: var(--primary);
 	font-size: 1.4rem;
 }
-.results-subtitle {
-	padding-right: 14px;
+.results-subtitle,
+.news-subtitle {
+	padding-right: 10px;
 	color: var(--text);
 }
 .result {
@@ -231,28 +237,42 @@ main {
 	border-radius: var(--radius);
 }
 
+/* ==================== news style ==================== */
+.news {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 5px;
+	border-bottom: 1px solid var(--border);
+}
+.news:last-child {
+	border-bottom: none;
+}
+.news-title {
+	border-right: 3px solid var(--primary);
+}
+.news-subtitle{
+	font-size: 1.4rem;
+}
 /* ==================== responsiv style ==================== */
 @media (min-width: 640px) {
 	.small {
 		font-size: 1.3rem;
 	}
-	.boxed-title {
+	.boxed-title,
+	.field-title,
+	.results-title,
+	.news-title {
 		font-size: 1.8rem;
 	}
-	.field-title{
-		font-size: 1.8rem;
-	}
-	.input {
-		font-size: 1.4rem;
-	}
-	.results-title {
-		font-size: 1.8rem;
-	}
-	.results-subtitle {
-		font-size: 1.4rem;
-	}
+	.input,
+	.results-subtitle,
 	.result-price{
 		font-size: 1.4rem;
+	}
+	.news-subtitle{
+		font-size: 1.6rem;
 	}
 }
 @media (min-width: 768px) {
@@ -266,11 +286,15 @@ main {
 	}
 	.boxed-title,
 	.field-title,
-	.results-title {
+	.results-title,
+	.news-title {
 		font-size: 2rem;
 	}
-	.result-price{
+	.result-price {
 		font-size: 1.6rem;
+	}
+	.news-subtitle{
+		font-size: 1.8rem;
 	}
 }
 @media (min-width: 1280px) {
@@ -279,13 +303,14 @@ main {
 	}
 	.boxed-title,
 	.field-title,
-	.results-title {
+	.results-title,
+	.news-title {
 		font-size: 2.2rem;
 	}
-	.result-price{
+	.result-price {
 		font-size: 1.8rem;
 	}
-}
-@media (min-width: 1536px) {
-
+	.news-subtitle{
+		font-size: 2rem;
+	}
 }
