@@ -89,7 +89,6 @@ const calculatePrice = () => {
 
 	// calculate Other price
 	rpOther = valueStoneInput + jewelValueInput + valueOtherBelongingsInput;
-	console.log(rpOther);
 	let rpGrantTotal = constructionWagesInput > 0 ? constructionWagesInput : 0;
 	if (constructionWagesPercentInput > 0) rpGrantTotal += goldDailyRateInput * (constructionWagesPercentInput / 100);
 

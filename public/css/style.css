@@ -231,12 +231,18 @@ main {
 	color: var(--text);
 }
 .result {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
 	margin: 0 5px;
 	padding: 4px 12px;
 	border: 2px solid var(--primary);
 	border-radius: var(--radius);
 }
-
+.decimal-output{
+	color: var(--text);
+}
 /* ==================== news style ==================== */
 .news {
 	width: 100%;
@@ -268,8 +274,11 @@ main {
 	}
 	.input,
 	.results-subtitle,
-	.result-price{
+	.result-price *{
 		font-size: 1.4rem;
+	}
+	.decimal-output{
+		font-size: 1.1rem;
 	}
 	.news-subtitle{
 		font-size: 1.6rem;
@@ -290,8 +299,11 @@ main {
 	.news-title {
 		font-size: 2rem;
 	}
-	.result-price {
+	.result-price * {
 		font-size: 1.6rem;
+	}
+	.decimal-output{
+		font-size: 1.3rem;
 	}
 	.news-subtitle{
 		font-size: 1.8rem;
@@ -307,8 +319,11 @@ main {
 	.news-title {
 		font-size: 2.2rem;
 	}
-	.result-price {
+	.result-price * {
 		font-size: 1.8rem;
+	}
+	.decimal-output{
+		font-size: 1.5rem;
 	}
 	.news-subtitle{
 		font-size: 2rem;
