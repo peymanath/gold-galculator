@@ -128,7 +128,7 @@ main {
 /* ==================== sections style ==================== */
 .boxed {
 	width: 100%;
-	margin: 10px 0;
+	margin: 15px 0;
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
 	box-shadow: 0 0 20px 0 var(--shadow);
@@ -261,6 +261,22 @@ main {
 .news-subtitle{
 	font-size: 1.4rem;
 }
+/* ==================== responsiv style ==================== */
+
+.boxed-description.box-social{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.social{
+	padding: 10px;
+}
+.social svg{
+	width: 40px;
+	height: 40px;
+}
+
 /* ==================== responsiv style ==================== */
 @media (min-width: 640px) {
 	.small {

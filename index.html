@@ -9,7 +9,30 @@
 	</head>
 	<body>
 		<!-- Svg Icon -->
-		<svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="0" height="0" style="display: none; visibility: hidden; position: absolute"></svg>
+		<svg
+			xmlns="https://www.w3.org/2000/svg"
+			xmlns:xlink="https://www.w3.org/1999/xlink"
+			width="0"
+			height="0"
+			style="display: none; visibility: hidden; position: absolute">
+			<symbol id="github" viewBox="0 0 24 24">
+				<path
+					fill="#171515"
+					d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"></path>
+			</symbol>
+
+			<symbol id="linkedin" viewBox="0 0 448 512">
+				<path
+					fill="#0a66c2"
+					d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+			</symbol>
+
+			<symbol id="telegram" viewBox="0 0 24 24">
+				<path
+					d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"
+					fill="#0088cc"></path>
+			</symbol>
+		</svg>
 
 		<main>
 			<!-- Data Box  -->
@@ -28,7 +51,13 @@
 								<small class="small">(گرم)</small>
 								<span class="require">*</span>
 							</label>
-							<input id="weight-input" type="number" class="input input-text" placeholder="وزن طلا" value="1" require />
+							<input
+								id="weight-input"
+								type="number"
+								class="input input-text"
+								placeholder="وزن طلا"
+								value="1"
+								require />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
@@ -37,7 +66,13 @@
 								<small class="small">(تومان)</small>
 								<sup class="require">*</sup>
 							</label>
-							<input id="gold-daily-rate-input" type="number" class="input input-text" placeholder="قیمت هر گرم طلای 18 عیار" value="2178000" require />
+							<input
+								id="gold-daily-rate-input"
+								type="number"
+								class="input input-text"
+								placeholder="قیمت هر گرم طلای 18 عیار"
+								value="2178000"
+								require />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
@@ -46,7 +81,13 @@
 								<small class="small">(درصد)</small>
 								<sup class="require">*</sup>
 							</label>
-							<input id="sales-profit-input" type="number" class="input input-text" placeholder="میزان سود فروشنده طلا را اینجا وارد نمایید." value="7" require />
+							<input
+								id="sales-profit-input"
+								type="number"
+								class="input input-text"
+								placeholder="میزان سود فروشنده طلا را اینجا وارد نمایید."
+								value="7"
+								require />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
@@ -54,7 +95,11 @@
 								<span class="field-title">تخفیف</span>
 								<small class="small">(تومان)</small>
 							</label>
-							<input id="discount-input" type="number" class="input input-text" placeholder="میزان کل تخفیفات" />
+							<input
+								id="discount-input"
+								type="number"
+								class="input input-text"
+								placeholder="میزان کل تخفیفات" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
@@ -62,7 +107,12 @@
 								<span class="field-title">مالیات</span>
 								<small class="small">(درصد)</small>
 							</label>
-							<input id="tax-input" type="number" class="input input-text" value="9" placeholder="مالیات بر ارزش افزوده" />
+							<input
+								id="tax-input"
+								type="number"
+								class="input input-text"
+								value="9"
+								placeholder="مالیات بر ارزش افزوده" />
 						</div>
 					</div>
 
@@ -74,7 +124,11 @@
 								<span class="field-title">اجرت ساخت</span>
 								<small class="small">(تومان)</small>
 							</label>
-							<input id="construction-wages-input" type="number" class="input input-text" placeholder="اجرت ساخت طلا و جواهر برای هر گرم را به تومان وارد نمایید" />
+							<input
+								id="construction-wages-input"
+								type="number"
+								class="input input-text"
+								placeholder="اجرت ساخت طلا و جواهر برای هر گرم را به تومان وارد نمایید" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
@@ -82,7 +136,12 @@
 								<span class="field-title">اجرت ساخت</span>
 								<small class="small">(درصد)</small>
 							</label>
-							<input id="construction-wages-percent-input" type="number" class="input input-text" value="18" placeholder="اجرت ساخت درصدی را بدون درصد و فقط عددی وارد کنید" />
+							<input
+								id="construction-wages-percent-input"
+								type="number"
+								class="input input-text"
+								value="18"
+								placeholder="اجرت ساخت درصدی را بدون درصد و فقط عددی وارد کنید" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
@@ -90,7 +149,11 @@
 								<span class="field-title">ارزش جواهر</span>
 								<small class="small">(تومان)</small>
 							</label>
-							<input id="jewel-value-input" type="number" class="input input-text" placeholder="ارزش جواهرات به کار رفته در زیورآلات خود را وارد نمایید" />
+							<input
+								id="jewel-value-input"
+								type="number"
+								class="input input-text"
+								placeholder="ارزش جواهرات به کار رفته در زیورآلات خود را وارد نمایید" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
@@ -98,7 +161,11 @@
 								<span class="field-title">ارزش سنگ</span>
 								<small class="small">(تومان)</small>
 							</label>
-							<input id="value-stone-input" type="number" class="input input-text" placeholder="ارزش کلی سنگهای قیمتی زیورآلات خود را وارد نمایید" />
+							<input
+								id="value-stone-input"
+								type="number"
+								class="input input-text"
+								placeholder="ارزش کلی سنگهای قیمتی زیورآلات خود را وارد نمایید" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
@@ -106,7 +173,11 @@
 								<span class="field-title">ارزش سایر متعلقات</span>
 								<small class="small">(تومان)</small>
 							</label>
-							<input id="value-other-belongings-input" type="number" class="input input-text" placeholder="ارزش سایر متعلقات بکار رفته در زیورآلات خود را وارد نمایید" />
+							<input
+								id="value-other-belongings-input"
+								type="number"
+								class="input input-text"
+								placeholder="ارزش سایر متعلقات بکار رفته در زیورآلات خود را وارد نمایید" />
 						</div>
 					</div>
 				</div>
@@ -149,7 +220,9 @@
 					<div class="results">
 						<div class="results-separator rs-description">
 							<span class="results-title">اجرت ساخت</span>
-							<span class="results-subtitle"> ( قیمت طلا * %<span id="cwp">0</span> ) + <span id="cwp-toman">0</span> تومان </span>
+							<span class="results-subtitle">
+								( قیمت طلا * %<span id="cwp">0</span> ) + <span id="cwp-toman">0</span> تومان
+							</span>
 						</div>
 						<div class="results-separator">
 							<span class="result">
@@ -175,7 +248,9 @@
 					<div class="results">
 						<div class="results-separator rs-description">
 							<span class="results-title">مالیات</span>
-							<span class="results-subtitle">(سود فروش طلا + اجرت ساخت) * %<span id="tax">0</span></span>
+							<span class="results-subtitle"
+								>(سود فروش طلا + اجرت ساخت) * %<span id="tax">0</span></span
+							>
 						</div>
 						<div class="results-separator">
 							<span class="result">
@@ -197,7 +272,42 @@
 					<!-- the news -->
 					<div class="news">
 						<span class="news-title">محاسبه قیمت بر اساس حذف مالیات از اصل طلا</span>
-						<span class="news-subtitle">از دی ماه سال 1400 مالیات بر ارزش افزوده طلا تنها بر روی میزان سود و اجرت ساخت طلا لحاظ می شود.</span>
+						<span class="news-subtitle"
+							>از دی ماه سال 1400 مالیات بر ارزش افزوده طلا تنها بر روی میزان سود و اجرت ساخت طلا
+							لحاظ می شود.</span
+						>
+					</div>
+				</div>
+			</section>
+
+			<!-- Result Box  -->
+			<section class="boxed">
+				<!-- the title box -->
+				<div class="boxed-title">ارتباط با من</div>
+
+				<!-- the desciption box -->
+				<div class="boxed-description box-social">
+
+					<div class="social">
+						<a href="https://github.com/peymanath" target="_blank">
+							<svg>
+								<use xlink:href="#github"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="social">
+						<a href="https://www.linkedin.com/in/peymanath" target="_blank">
+							<svg>
+								<use xlink:href="#linkedin"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="social">
+						<a href="https://t.me/peymanath" target="_blank">
+							<svg>
+								<use xlink:href="#telegram"></use>
+							</svg>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -205,6 +315,8 @@
 
 		<!-- Scripts -->
 		<script src="public/js/calculatorGold.js"></script>
-		<script>const gold = new GoldCalculator();</script>
+		<script>
+			const gold = new GoldCalculator();
+		</script>
 	</body>
 </html>
