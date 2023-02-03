@@ -58,32 +58,41 @@ function str_replace(search, replace, subject, countObj) {
  */
 class GoldCalculator {
 	/**
-	 *
+	 * get elemnts from the document
 	 * @param {String} id => the id Element
 	 * @param {String} mode => the value mode can receive an input value
-	 * @param {String} filter => The filter can determine the type of the return value
 	 * @returns {Number || Element}
 	 */
-	getElement(id, mode, filter) {
-		if (mode !== "value") {
-			return document.getElementById(id);
-		} else {
-			const element = document.getElementById(id).value;
-			if (filter === "price") return this.filterPrice(element);
-			else if (filter === "number") return this.filterNamberVal(element);
-		}
+	getElement(id, mode) {
+		// recive Element
+		let elementItem = document.getElementById(id);
+
+		// receive value to element
+		if (mode === "value") elementItem = this.toNumber(elementItem.value);
+
+		// return result
+		return elementItem;
 	}
 
-	filterPrice(number) {
-		if (typeof number == "undefined" || number == "") return 0;
-		return parseFloat(this.translateNumber(str_replace(",", "", number)), "en");
+	/**
+	 * convert price & string to number
+	 * @param {Number} number
+	 * @returns {Number}
+	 */
+	toNumber(number) {
+		return typeof number == "undefined" || number == ""
+			? 0
+			: parseFloat(this.translateNumber(number.replace(/\,/g, ""), "en"));
 	}
-	filterNamberVal(number) {
-		if (typeof number == "undefined" || number == "") return 0;
-		return parseFloat(this.translateNumber(str_replace(",", "", number)), "en");
-	}
+
+	/**
+	 *
+	 * @param {String} number
+	 * @param {String} language => Language List {'fa', 'en'}
+	 * @returns
+	 */
 	translateNumber = (number, language) => {
-		number = parseInt(number);
+		if (typeof number != "string") return new Error("not defined string").message;
 		if (language === "fa") number = number.replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
 		if (language === "en") number = number.replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
 		return number;
@@ -92,5 +101,6 @@ class GoldCalculator {
 
 const gold = new GoldCalculator();
 
-console.log(gold.getElement("gold-daily-rate-input", "value", "price"));
-console.log(gold.getElement("sales-profit-input", "value", "number"));
+console.log(gold.getElement("gold-daily-rate-input", "value"));
+console.log(gold.getElement("sales-profit-input", "value"));
+console.log(gold.toNumber("13,45,18.45", "fa"));
