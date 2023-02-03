@@ -45,68 +45,16 @@ class GoldCalculator {
 	otherPrice = 0;
 
 	/**
-	 * Receive Element
-	 * @type {Element}
+	 * output default value
+	 * @type {Number}
 	 */
-	weightInput = this.getElement("weight-input", "value");
+	wagesGold = 0;
 
 	/**
-	 * Receive Element
+	 * Receive all
 	 * @type {Element}
 	 */
-	goldDailyRateInput = this.getElement("gold-daily-rate-input", "value");
-
-	/**
-	 * Receive Element
-	 * @type {Element}
-	 */
-	salesProfitInput = this.getElement("sales-profit-input", "value");
-
-	/**
-	 * Receive Element
-	 * @type {Element}
-	 */
-	discountInput = this.getElement("discount-input", "value");
-
-	/**
-	 * Receive Element
-	 * @type {Element}
-	 */
-	taxInput = this.getElement("tax-input", "value");
-
-	/**
-	 * Receive Element
-	 * @type {Element}
-	 */
-	constructionWagesInput = this.getElement("construction-wages-input", "value");
-
-	/**
-	 * Receive Element
-	 * @type {Element}
-	 */
-	constructionWagesPercentInput = this.getElement("construction-wages-percent-input", "value");
-
-	/**
-	 * Receive Element
-	 * @type {Element}
-	 */
-	jewelValueInput = this.getElement("jewel-value-input", "value");
-
-	/**
-	 * Receive Element
-	 * @type {Element}
-	 */
-	valueStoneInput = this.getElement("value-stone-input", "value");
-
-	/**
-	 * Receive Element
-	 * @type {Element}
-	 */
-	valueOtherBelongingsInput = this.getElement("value-other-belongings-input", "value");
-
-	constructor() {
-		
-	}
+	allInput = document.getElementsByClassName("input");
 
 	/**
 	 * get elemnts from the document
@@ -114,7 +62,7 @@ class GoldCalculator {
 	 * @param {String} mode => the value mode can receive an input value
 	 * @returns {Number || Element}
 	 */
-	getElement(id, mode) {
+	getElement(id, mode = "") {
 		// recive Element
 		let elementItem = document.getElementById(id);
 
@@ -142,18 +90,153 @@ class GoldCalculator {
 	 * @param {String} language => Language List {'fa', 'en'}
 	 * @returns
 	 */
-	translateNumber(number, language = 'fa') {
+	translateNumber(number, language = "fa") {
 		if (typeof number !== "string") number = String(number);
 
 		const translate = num => {
-            // Persian Translate
+			// Persian Translate
 			if (language === "fa") return num.replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
-            
-            // English Translate
+
+			// English Translate
 			if (language === "en") return num.replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
 		};
 
 		return translate(number);
+	}
+
+	/**
+	 * constructor this class
+	 * @constructor
+	 */
+	constructor() {
+		document.addEventListener("DOMContentLoaded", () => this.calculte());
+
+		[...this.allInput].forEach(e => {
+			e.addEventListener("change", () => this.calculte());
+			e.addEventListener("keyup", () => this.calculte());
+		});
+	}
+
+	calculte() {
+		// call new Update Value
+		this.newUpdateValue();
+
+		// call calculate value
+		this.calculteValue();
+
+		// push value to DOM
+		this.pushValue();
+	}
+
+	newUpdateValue() {
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.weightGold = this.getElement("weight-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.goldDailyRateGold = this.getElement("gold-daily-rate-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.salesProfitGold = this.getElement("sales-profit-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.discountGold = this.getElement("discount-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.taxGold = this.getElement("tax-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.wagesTomanGold = this.getElement("construction-wages-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.wagesPercentGold = this.getElement("construction-wages-percent-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.jewelValueGold = this.getElement("jewel-value-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.valueStoneGold = this.getElement("value-stone-input", "value");
+
+		/**
+		 * Receive Element
+		 * @type {Element}
+		 */
+		this.valueOtherBelongingsGold = this.getElement("value-other-belongings-input", "value");
+	}
+
+	calculteValue() {
+		// calculate Other price
+		this.otherPrice = this.valueStoneGold + this.jewelValueGold + this.valueOtherBelongingsGold;
+
+		//construction wages Toman
+		this.wagesGold = this.wagesTomanGold > 0 ? this.wagesTomanGold : 0;
+
+		//construction wages Toman + Percent
+		if (this.wagesPercentGold > 0)
+			this.wagesGold += this.goldDailyRateGold * (this.wagesPercentGold / 100);
+
+		// calculate Gold
+		this.goldPrice = this.goldDailyRateGold * this.weightGold;
+
+		// calculate grant
+		this.grantPrice = this.wagesGold * this.weightGold;
+
+		// calculate profit
+		this.profitPrice =
+			((this.goldPrice + this.grantPrice + this.otherPrice) * this.salesProfitGold) / 100;
+
+		// calculate tax
+		this.taxPrice = (this.profitPrice + this.grantPrice + this.otherPrice) * (this.taxGold / 100);
+
+		// calculate sales
+		this.salesPrice =
+			this.goldPrice +
+			this.profitPrice +
+			this.grantPrice +
+			this.otherPrice +
+			this.taxPrice -
+			this.discountGold;
+	}
+
+	pushValue() {
+		// push to price section
+		this.getElement("rpSales").innerHTML = parseInt(this.salesPrice).toLocaleString("fa-IR");
+		this.getElement("rpGold").innerHTML = parseInt(this.goldPrice).toLocaleString("fa-IR");
+		this.getElement("rpGrant").innerHTML = parseInt(this.wagesGold).toLocaleString("fa-IR");
+		this.getElement("rpProfit").innerHTML = parseInt(this.profitPrice).toLocaleString("fa-IR");
+		this.getElement("rpTax").innerHTML = parseInt(this.taxPrice).toLocaleString("fa-IR");
+
+		// push to subtitle
+		this.getElement("cwp").innerHTML = parseInt(this.wagesPercentGold).toLocaleString("fa-IR");
+		this.getElement("cwp-toman").innerHTML = parseInt(this.wagesTomanGold).toLocaleString("fa-IR");
+		this.getElement("sp").innerHTML = parseInt(this.salesProfitGold).toLocaleString("fa-IR");
+		this.getElement("tax").innerHTML = parseInt(this.taxGold).toLocaleString("fa-IR");
 	}
 }
 
