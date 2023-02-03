@@ -130,7 +130,7 @@
 					<div class="results">
 						<div class="results-separator rs-description">
 							<span class="results-title">قیمت طلای محصول</span>
-							<span class="results-subtitle">وزن ✕ نرخ روز طلا</span>
+							<span class="results-subtitle">وزن * نرخ روز طلا</span>
 						</div>
 						<div class="results-separator">
 							<span class="result">
@@ -143,7 +143,9 @@
 					<div class="results">
 						<div class="results-separator rs-description">
 							<span class="results-title">اجرت ساخت</span>
-							<span class="results-subtitle">(قیمت طلا ✕ ۱۸ %) + ۰ تومان</span>
+							<span class="results-subtitle">
+								( قیمت طلا * %<span id="cwp">0</span> ) + <span id="cwp-toman">0</span> تومان
+							</span>
 						</div>
 						<div class="results-separator">
 							<span class="result">
@@ -156,7 +158,7 @@
 					<div class="results">
 						<div class="results-separator rs-description">
 							<span class="results-title">سود فروش طلا</span>
-							<span class="results-subtitle">(قیمت طلا + اجرت ساخت) ✕ ۶ %</span>
+							<span class="results-subtitle">(قیمت طلا + اجرت ساخت) * %<span id="sp">0</span></span>
 						</div>
 						<div class="results-separator">
 							<span class="result">
@@ -169,7 +171,7 @@
 					<div class="results">
 						<div class="results-separator rs-description">
 							<span class="results-title">مالیات</span>
-							<span class="results-subtitle">(سود فروش طلا + اجرت ساخت) ✕ ۹ %</span>
+							<span class="results-subtitle">(سود فروش طلا + اجرت ساخت) * %<span id="tax">0</span></span>
 						</div>
 						<div class="results-separator">
 							<span class="result">

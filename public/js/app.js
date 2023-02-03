@@ -113,6 +113,11 @@ const calculatePrice = () => {
 	document.getElementById("rpGrant").innerHTML = parseInt(rpGrant).toLocaleString("fa-IR");
 	document.getElementById("rpProfit").innerHTML = parseInt(rpProfit).toLocaleString("fa-IR");
 	document.getElementById("rpTax").innerHTML = parseInt(rpTax).toLocaleString("fa-IR");
+
+	document.getElementById("cwp").innerHTML = parseInt(constructionWagesPercentInput).toLocaleString("fa-IR");
+	document.getElementById("cwp-toman").innerHTML = parseInt(constructionWagesInput).toLocaleString("fa-IR");
+	document.getElementById("sp").innerHTML = parseInt(salesProfitInput).toLocaleString("fa-IR");
+	document.getElementById("tax").innerHTML = parseInt(taxInput).toLocaleString("fa-IR");
 };
 
 document.addEventListener("DOMContentLoaded", calculatePrice);
