@@ -196,6 +196,9 @@ class GoldCalculator {
 		this.valueOtherBelongingsGold = this.getElement("value-other-belongings-input", "value");
 	}
 
+	/**
+	 * Calculation of various formulas
+	 */
 	calculteValue() {
 		// calculate Other price
 		this.otherPrice = this.valueStoneGold + this.jewelValueGold + this.valueOtherBelongingsGold;
