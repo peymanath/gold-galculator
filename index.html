@@ -22,17 +22,17 @@
 						<!-- the inputs -->
 						<div class="field">
 							<label for="weight-input" class="label">
-								<span>وزن</span>
-								<small>(گرم)</small>
-								<sup class="require">*</sup>
+								<span class="field-title">وزن</span>
+								<small class="small">(گرم)</small>
+								<span class="require">*</span>
 							</label>
 							<input id="weight-input" type="number" class="input input-text" placeholder="وزن طلا" value="1" require />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
 							<label for="gold-daily-rate-input" class="label">
-								<span>نرخ روز طلا</span>
-								<small>(تومان)</small>
+								<span class="field-title">نرخ روز طلا</span>
+								<small class="small">(تومان)</small>
 								<sup class="require">*</sup>
 							</label>
 							<input id="gold-daily-rate-input" type="number" class="input input-text" placeholder="قیمت هر گرم طلای 18 عیار" value="2178000" require />
@@ -40,8 +40,8 @@
 						<!-- the inputs -->
 						<div class="field">
 							<label for="sales-profit-input" class="label">
-								<span>سود فروش</span>
-								<small>(درصد)</small>
+								<span class="field-title">سود فروش</span>
+								<small class="small">(درصد)</small>
 								<sup class="require">*</sup>
 							</label>
 							<input id="sales-profit-input" type="number" class="input input-text" placeholder="میزان سود فروشنده طلا را اینجا وارد نمایید." value="7" require />
@@ -49,16 +49,16 @@
 						<!-- the inputs -->
 						<div class="field">
 							<label for="discount-input" class="label">
-								<span>تخفیف</span>
-								<small>(تومان)</small>
+								<span class="field-title">تخفیف</span>
+								<small class="small">(تومان)</small>
 							</label>
 							<input id="discount-input" type="number" class="input input-text" placeholder="میزان کل تخفیفات" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
 							<label for="tax-input" class="label">
-								<span>مالیات</span>
-								<small>(درصد)</small>
+								<span class="field-title">مالیات</span>
+								<small class="small">(درصد)</small>
 							</label>
 							<input id="tax-input" type="number" class="input input-text" value="9" placeholder="مالیات بر ارزش افزوده" />
 						</div>
@@ -68,40 +68,40 @@
 						<!-- the inputs -->
 						<div class="field">
 							<label for="construction-wages-input" class="label">
-								<span>اجرت ساخت</span>
-								<small>(تومان)</small>
+								<span class="field-title">اجرت ساخت</span>
+								<small class="small">(تومان)</small>
 							</label>
 							<input id="construction-wages-input" type="number" class="input input-text" placeholder="اجرت ساخت طلا و جواهر برای هر گرم را به تومان وارد نمایید" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
 							<label for="construction-wages-percent-input" class="label">
-								<span>اجرت ساخت</span>
-								<small>(درصد)</small>
+								<span class="field-title">اجرت ساخت</span>
+								<small class="small">(درصد)</small>
 							</label>
 							<input id="construction-wages-percent-input" type="number" class="input input-text" value="18" placeholder="اجرت ساخت درصدی را بدون درصد و فقط عددی وارد کنید" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
 							<label for="jewel-value-input" class="label">
-								<span>ارزش جواهر</span>
-								<small>(تومان)</small>
+								<span class="field-title">ارزش جواهر</span>
+								<small class="small">(تومان)</small>
 							</label>
 							<input id="jewel-value-input" type="number" class="input input-text" placeholder="ارزش جواهرات به کار رفته در زیورآلات خود را وارد نمایید" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
 							<label for="value-stone-input" class="label">
-								<span>ارزش سنگ</span>
-								<small>(تومان)</small>
+								<span class="field-title">ارزش سنگ</span>
+								<small class="small">(تومان)</small>
 							</label>
 							<input id="value-stone-input" type="number" class="input input-text" placeholder="ارزش کلی سنگهای قیمتی زیورآلات خود را وارد نمایید" />
 						</div>
 						<!-- the inputs -->
 						<div class="field">
 							<label for="value-other-belongings-input" class="label">
-								<span>ارزش سایر متعلقات</span>
-								<small>(تومان)</small>
+								<span class="field-title">ارزش سایر متعلقات</span>
+								<small class="small">(تومان)</small>
 							</label>
 							<input id="value-other-belongings-input" type="number" class="input input-text" placeholder="ارزش سایر متعلقات بکار رفته در زیورآلات خود را وارد نمایید" />
 						</div>
@@ -121,8 +121,8 @@
 						</div>
 						<div class="results-separator">
 							<span class="result">
-                                <span id="rpSales">0</span>
-                                <small>تومان</small>
+                                <span id="rpSales" class="result-price">0</span>
+                                <small class="small">تومان</small>
                             </span>
 						</div>
 					</div>
@@ -134,8 +134,8 @@
 						</div>
 						<div class="results-separator">
 							<span class="result">
-                                <span id="rpGold">0</span>
-                                <small>تومان</small>
+                                <span id="rpGold" class="result-price">0</span>
+                                <small class="small">تومان</small>
                             </span>
 						</div>
 					</div>
@@ -147,8 +147,8 @@
 						</div>
 						<div class="results-separator">
 							<span class="result">
-                                <span id="rpGrant">0</span>
-                                <small>تومان</small>
+                                <span id="rpGrant" class="result-price">0</span>
+                                <small class="small">تومان</small>
                             </span>
 						</div>
 					</div>
@@ -160,8 +160,8 @@
 						</div>
 						<div class="results-separator">
 							<span class="result">
-                                <span id="rpProfit">0</span>
-                                <small>تومان</small>
+                                <span id="rpProfit" class="result-price">0</span>
+                                <small class="small">تومان</small>
                             </span>
 						</div>
 					</div>
@@ -173,8 +173,8 @@
 						</div>
 						<div class="results-separator">
 							<span class="result">
-                                <span id="rpTax">0</span>
-                                <small>تومان</small>
+                                <span id="rpTax" class="result-price">0</span>
+                                <small class="small">تومان</small>
                             </span>
 						</div>
 					</div>

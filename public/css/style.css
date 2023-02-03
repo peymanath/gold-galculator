@@ -3,22 +3,23 @@
 	--primary: #00abb3;
 	--primary-t: #fff;
 	--primary-b: #00abb3;
-	--secondary: #3c4048;
+	--secondary: #646464;
 	--text: #b2b2b2;
 	--border: #eaeaea;
 	--shadow: #d6d3d3b7;
-	--radius: 0.7rem;
+	--radius: 0.6rem;
 	--font-family: "Ray";
 }
 
 /* ==================== Reset Css ==================== */
-*:where(
-		:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
-	) {
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
 	all: unset;
 	display: revert;
 }
 
+* {
+	transition: all 0.3s ease-in-out;
+}
 *,
 *::before,
 *::after {
@@ -113,16 +114,16 @@ pre {
 
 * {
 	font-family: "Ray";
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 /* ==================== main style ==================== */
 main {
 	padding: 0 20px;
 }
-small{
-    font-size: 1rem;
-    color: var(--primary);
+.small {
+	font-size: 1rem;
+	color: var(--primary);
 }
 /* ==================== sections style ==================== */
 .boxed {
@@ -147,15 +148,16 @@ small{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	gap: 10px;
 }
-.boxed-description .fields{
+.boxed-description .fields {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	gap: 10px;
 }
-.boxed-description.box-results{
+.boxed-description.box-results {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -175,8 +177,11 @@ small{
 .label {
 	padding: 0 5px;
 }
+.field-title{
+	color: var(--secondary);
+	font-size: 1.4rem;
+}
 .input {
-	font-size: 1.2rem;
 	padding: 6px 10px;
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
@@ -187,11 +192,12 @@ small{
 .input:focus::placeholder {
 	color: transparent;
 }
-.require{
-    color: red;
+.require {
+	font-size: 1.8rem;
+	color: red;
 }
 /* ==================== result style ==================== */
-.results{
+.results {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -201,32 +207,85 @@ small{
 	padding-bottom: 5px;
 	border-bottom: 1px solid var(--border);
 }
-.results-separator{
+.results-separator {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 }
-.results-separator.rs-description{
+.results-separator.rs-description {
 	border-right: 4px solid var(--primary);
 }
-.results-title{
+.results-title {
 	padding: 0 10px;
 	color: var(--primary);
+	font-size: 1.4rem;
 }
-.results-subtitle{
+.results-subtitle {
 	padding-right: 14px;
-	font-size: 1.2rem;
 	color: var(--text);
 }
-.result{	
+.result {
 	margin: 0 5px;
 	padding: 4px 12px;
 	border: 2px solid var(--primary);
 	border-radius: var(--radius);
 }
+
 /* ==================== responsiv style ==================== */
+@media (min-width: 640px) {
+	.small {
+		font-size: 1.3rem;
+	}
+	.boxed-title {
+		font-size: 1.8rem;
+	}
+	.field-title{
+		font-size: 1.8rem;
+	}
+	.input {
+		font-size: 1.4rem;
+	}
+	.results-title {
+		font-size: 1.8rem;
+	}
+	.results-subtitle {
+		font-size: 1.4rem;
+	}
+	.result-price{
+		font-size: 1.4rem;
+	}
+}
 @media (min-width: 768px) {
 	.boxed-description .fields {
 		width: 48%;
 	}
+}
+@media (min-width: 1024px) {
+	.small {
+		font-size: 1.4rem;
+	}
+	.boxed-title,
+	.field-title,
+	.results-title {
+		font-size: 2rem;
+	}
+	.result-price{
+		font-size: 1.6rem;
+	}
+}
+@media (min-width: 1280px) {
+	.small {
+		font-size: 1.5rem;
+	}
+	.boxed-title,
+	.field-title,
+	.results-title {
+		font-size: 2.2rem;
+	}
+	.result-price{
+		font-size: 1.8rem;
+	}
+}
+@media (min-width: 1536px) {
+
 }
