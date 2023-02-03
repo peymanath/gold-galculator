@@ -21,7 +21,7 @@ By entering the inputs, the daily price of gold is calculated
 ---
 ### Usage
 
-After adding the JavaScript and CSS style files in the `public` folder, you must call the `GoldCalculator` class. 
+After adding the JavaScript(`calculatorGold.js`) and CSS(`style.css`) style files in the `public` folder, you must call the `GoldCalculator` class. 
 
 Example:
 
