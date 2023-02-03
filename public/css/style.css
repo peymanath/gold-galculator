@@ -231,6 +231,10 @@ main {
 	color: var(--text);
 }
 .result {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
 	margin: 0 5px;
 	padding: 4px 12px;
 	border: 2px solid var(--primary);

@@ -117,6 +117,9 @@ class GoldCalculator {
 		});
 	}
 
+	/**
+	 * manage functions calculate
+	 */
 	calculte() {
 		// call new Update Value
 		this.newUpdateValue();
@@ -128,6 +131,9 @@ class GoldCalculator {
 		this.pushValue();
 	}
 
+	/**
+	 * receive & updata an input value
+	 */
 	newUpdateValue() {
 		/**
 		 * Receive Element
@@ -224,20 +230,30 @@ class GoldCalculator {
 			this.discountGold;
 	}
 
+	/**
+	 *
+	 * @param {String(Number)} number
+	 * @returns
+	 */
+	stringSeparator(number) {
+		return number.toLocaleString("fa-IR");
+	}
+
+	/**
+	 * push value to DOM
+	 */
 	pushValue() {
 		// push to price section
-		this.getElement("rpSales").innerHTML = parseInt(this.salesPrice).toLocaleString("fa-IR");
-		this.getElement("rpGold").innerHTML = parseInt(this.goldPrice).toLocaleString("fa-IR");
-		this.getElement("rpGrant").innerHTML = parseInt(this.wagesGold).toLocaleString("fa-IR");
-		this.getElement("rpProfit").innerHTML = parseInt(this.profitPrice).toLocaleString("fa-IR");
-		this.getElement("rpTax").innerHTML = parseInt(this.taxPrice).toLocaleString("fa-IR");
+		this.getElement("rpSales").innerHTML = this.stringSeparator(this.salesPrice);
+		this.getElement("rpGold").innerHTML = this.stringSeparator(this.goldPrice);
+		this.getElement("rpGrant").innerHTML = this.stringSeparator(this.wagesGold);
+		this.getElement("rpProfit").innerHTML = this.stringSeparator(this.profitPrice);
+		this.getElement("rpTax").innerHTML = this.stringSeparator(this.taxPrice);
 
 		// push to subtitle
-		this.getElement("cwp").innerHTML = parseInt(this.wagesPercentGold).toLocaleString("fa-IR");
-		this.getElement("cwp-toman").innerHTML = parseInt(this.wagesTomanGold).toLocaleString("fa-IR");
-		this.getElement("sp").innerHTML = parseInt(this.salesProfitGold).toLocaleString("fa-IR");
-		this.getElement("tax").innerHTML = parseInt(this.taxGold).toLocaleString("fa-IR");
+		this.getElement("cwp").innerHTML = this.stringSeparator(this.wagesPercentGold);
+		this.getElement("cwp-toman").innerHTML = this.stringSeparator(this.wagesTomanGold);
+		this.getElement("sp").innerHTML = this.stringSeparator(this.salesProfitGold);
+		this.getElement("tax").innerHTML = this.stringSeparator(this.taxGold);
 	}
 }
-
-const gold = new GoldCalculator();
