@@ -239,7 +239,10 @@ class GoldCalculator {
 	 * @returns
 	 */
 	stringSeparator(number) {
-		return number.toLocaleString("fa-IR");
+		const num = number.toLocaleString("fa-IR");
+		let output = `<span>${num.split("٫")[0]}</span>`;
+		if (num.split("٫")[1]) output += `<span class="decimal-output">٫${num.split("٫")[1]}</span>`;
+		return output;
 	}
 
 	/**
