@@ -10,6 +10,7 @@ By entering the inputs, the daily price of gold is calculated
 ### Deploy Project
 
 - [view online the project in GitHub](https://peymanath.github.io/gold-galculator/)
+- [view online the project in Personal Website](https://peymanath.ir/tools/gold-calculator)
 
 ---
 
